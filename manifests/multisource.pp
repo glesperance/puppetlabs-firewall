@@ -21,6 +21,7 @@ define firewall::multisource (
   $sport  = undef,
   $port   = undef,
   $proto  = undef,
+  $state  = undef,
   $text   = $title
   ) {
   $value = split ($title, ',')
@@ -30,6 +31,7 @@ define firewall::multisource (
     dport  => $dport,
     sport  => $sport,
     proto  => $proto,
+    state  => $state,
     port   => $port,
     source => $value[1]
   }
